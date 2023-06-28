@@ -4,6 +4,7 @@
 -- Maintainer:      https://github.com/NTBBloodbath
 -- License:         The MIT License (MIT)
 -- Based On:        https://github.com/romgrk/doom-one.vim and the original Doom Emacs one
+
 local colors = {
   dark = {
     bg = "#282c34",
@@ -17,7 +18,7 @@ local colors = {
     base2 = "#202328",
     base3 = "#23272e",
     base4 = "#3f444a",
-    base5 = "#73797e",
+    base5 = "#5b6268",
     base6 = "#73797e",
     base7 = "#9ca0a4",
     base8 = "#dfdfdf",

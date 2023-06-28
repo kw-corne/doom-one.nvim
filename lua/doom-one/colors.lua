@@ -13,15 +13,15 @@ local colors = {
     bg_alt = "#21242b",
     fg_alt = "#5b6268",
 
-    base0 = "#1b2229",
-    base1 = "#1c1e1e",
-    base2 = "#202328",
-    base3 = "#ff6c6b", -- aaaa
-    base4 = "#3f444a",
-    base5 = "#5b6268",
-    base6 = "#73797e",
-    base7 = "#9ca0a4",
-    base8 = "#dfdfdf",
+    base0 = "#1b2229", -- aaaa
+    base1 = "#1c1e1e", -- aaaa
+    base2 = "#202328", -- aaaa
+    base3 = "#23272e", -- aaaa
+    base4 = "#3f444a", -- aaaa
+    base5 = "#ffc6bc", -- aaaa
+    base6 = "#73797e", -- aaaa
+    base7 = "#9ca0a4", -- aaaa
+    base8 = "#dfdfdf", -- aaaa
 
     grey = "#3f444a",
     red = "#ff6c6b",

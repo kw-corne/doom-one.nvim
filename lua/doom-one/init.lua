@@ -119,14 +119,14 @@ doom_one.set_colorscheme = function()
   --- Search, Highlight, Conceal, Messages
   ----------------------------------------
   set_hl("Search", { bg = palette.dark_blue, fg = "fg" })
-  set_hl("Substitute", { fg = palette.red, bold = true, strikethrough = true })
-  set_hl("IncSearch", { bg = palette.yellow, fg = "bg", bold = true })
+  set_hl("Substitute", { fg = palette.red, bold = false, strikethrough = true })
+  set_hl("IncSearch", { bg = palette.yellow, fg = "bg", bold = false })
   set_hl("IncSearchCursor", { reverse = true })
 
   set_hl("Conceal", { fg = palette.grey })
-  set_hl("SpecialKey", { fg = palette.violet, bold = true })
-  set_hl("NonText", { fg = palette.fg_alt, bold = true })
-  set_hl("MatchParen", { fg = palette.red, bold = true })
+  set_hl("SpecialKey", { fg = palette.violet, bold = false })
+  set_hl("NonText", { fg = palette.fg_alt, bold = false })
+  set_hl("MatchParen", { fg = palette.red, bold = false })
   set_hl("Whitespace", { fg = palette.grey })
 
   set_hl("Highlight", { bg = palette.bg_alt })
@@ -135,8 +135,8 @@ doom_one.set_colorscheme = function()
   set_hl("Question", { fg = palette.green, bold = true })
 
   set_hl("File", { fg = "fg" })
-  set_hl("Directory", { fg = palette.violet, bold = true })
-  set_hl("Title", { fg = palette.violet, bold = true })
+  set_hl("Directory", { fg = palette.violet, bold = false })
+  set_hl("Title", { fg = palette.violet, bold = false })
 
   set_hl("Bold", { bold = true })
   set_hl("Emphasis", { italic = true })

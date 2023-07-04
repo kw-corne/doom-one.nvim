@@ -70,12 +70,12 @@ doom_one.set_colorscheme = function()
   set_hl("Normal", { bg = config.ui.transparent_background and "NONE" or palette.bg, fg = palette.fg })
   set_hl("NormalPopup", { bg = palette.bg_alt, fg = utils.lighten(palette.fg, 0.2) })
   set_hl("NormalPopover", { bg = palette.bg_alt, fg = utils.lighten(palette.fg, 0.2) })
-  set_hl("NormalPopupPrompt", { bg = palette.bg_alt, fg = palette.base7, bold = true })
+  set_hl("NormalPopupPrompt", { bg = palette.bg_alt, fg = palette.base7, bold = false })
   set_hl("NormalPopupSubtle", { bg = palette.bg_alt, fg = palette.base6 })
   set_hl("EndOfBuffer", { bg = "bg", fg = "bg" })
 
   set_hl("Visual", { bg = palette.dark_blue })
-  set_hl("VisualBold", { bg = palette.dark_blue, bold = true })
+  set_hl("VisualBold", { bg = palette.dark_blue, bold = false })
 
   set_hl("LineNr", { bg = "bg", fg = palette.base6 })
   set_hl("Cursor", { bg = palette.blue })
@@ -101,18 +101,18 @@ doom_one.set_colorscheme = function()
   set_hl("Separator", { fg = palette.fg_alt })
   set_hl("VertSplit", { bg = "bg", fg = palette.grey })
 
-  set_hl("TabLine", { bg = palette.bg_alt, fg = palette.base7, bold = true })
-  set_hl("TabLineSel", { bg = "bg", fg = palette.blue, bold = true })
-  set_hl("TabLineFill", { bg = palette.base1, bold = true })
+  set_hl("TabLine", { bg = palette.bg_alt, fg = palette.base7, bold = false })
+  set_hl("TabLineSel", { bg = "bg", fg = palette.blue, bold = false })
+  set_hl("TabLineFill", { bg = palette.base1, bold = false })
 
   set_hl("StatusLine", { bg = dark_theme and palette.base3 or palette.base2, fg = palette.base8 })
   set_hl("StatusLineNC", { bg = palette.bg_alt, fg = palette.base6 })
-  set_hl("StatusLinePart", { bg = palette.bg_alt, fg = palette.base6, bold = true })
+  set_hl("StatusLinePart", { bg = palette.bg_alt, fg = palette.base6, bold = false })
   set_hl("StatusLinePartNC", { link = "StatusLinePart" })
 
   set_hl("Pmenu", { bg = palette.bg_alt, fg = "fg" })
   set_hl("PmenuSel", { bg = palette.blue, fg = dark_theme and palette.base0 or palette.base8 })
-  set_hl("PmenuSelBold", { bg = palette.blue, fg = dark_theme and palette.base0 or palette.base8, bold = true })
+  set_hl("PmenuSelBold", { bg = palette.blue, fg = dark_theme and palette.base0 or palette.base8, bold = false })
   set_hl("PmenuSbar", { bg = palette.bg_alt })
   set_hl("PmenuThumb", { bg = palette.grey })
 
@@ -132,13 +132,13 @@ doom_one.set_colorscheme = function()
   set_hl("Highlight", { bg = palette.bg_alt })
   set_hl("HighlightSubtle", { link = "Highlight" })
 
-  set_hl("Question", { fg = palette.green, bold = true })
+  set_hl("Question", { fg = palette.green, bold = false })
 
   set_hl("File", { fg = "fg" })
   set_hl("Directory", { fg = palette.violet, bold = false })
   set_hl("Title", { fg = palette.violet, bold = false })
 
-  set_hl("Bold", { bold = true })
+  set_hl("Bold", { bold = false })
   set_hl("Emphasis", { italic = true })
 
   --- Text Levels
@@ -156,7 +156,7 @@ doom_one.set_colorscheme = function()
 
   for group, hl in pairs(text_colors) do
     set_hl("Text" .. group, { fg = hl })
-    set_hl("Text" .. group .. "Bold", { fg = hl, bold = true })
+    set_hl("Text" .. group .. "Bold", { fg = hl, bold = false })
   end
 
   set_hl("Msg", { link = "TextSuccess" })
@@ -175,20 +175,20 @@ doom_one.set_colorscheme = function()
 
   --- Main Syntax
   ---------------
-  set_hl("Tag", { fg = utils.mix(palette.blue, palette.cyan, 0.5), bold = true })
+  set_hl("Tag", { fg = utils.mix(palette.blue, palette.cyan, 0.5), bold = false })
   set_hl("Link", { fg = palette.green, underline = true })
   set_hl("URL", { link = "Link" })
   set_hl("Underlined", { fg = utils.mix(palette.blue, palette.cyan, 0.5), underline = true })
 
   set_hl("Comment", { fg = dark_theme and palette.base6 or palette.base4, italic = config.ui.italic_comments })
-  set_hl("CommentBold", { fg = dark_theme and palette.base6 or palette.base4, bold = true })
-  set_hl("SpecialComment", { fg = dark_theme and palette.base7 or palette.base5, bold = true })
+  set_hl("CommentBold", { fg = dark_theme and palette.base6 or palette.base4, bold = false })
+  set_hl("SpecialComment", { fg = dark_theme and palette.base7 or palette.base5, bold = false })
 
   set_hl("Macro", { fg = palette.violet })
-  set_hl("Define", { fg = palette.violet, bold = true })
-  set_hl("Include", { fg = palette.violet, bold = true })
-  set_hl("PreProc", { fg = palette.violet, bold = true })
-  set_hl("PreCondit", { fg = palette.violet, bold = true })
+  set_hl("Define", { fg = palette.violet, bold = false })
+  set_hl("Include", { fg = palette.violet, bold = false })
+  set_hl("PreProc", { fg = palette.violet, bold = false })
+  set_hl("PreCondit", { fg = palette.violet, bold = false })
 
   set_hl("Label", { fg = dark_theme and palette.blue or palette.red })
   set_hl("Repeat", { fg = dark_theme and palette.blue or palette.red })
@@ -200,24 +200,24 @@ doom_one.set_colorscheme = function()
   set_hl("Conditional", { fg = dark_theme and palette.blue or palette.red })
 
   set_hl("Variable", { fg = utils.darken(palette.magenta, 0.36) })
-  set_hl("VariableBuiltin", { fg = palette.magenta, bold = true })
-  set_hl("Constant", { fg = palette.violet, bold = true })
+  set_hl("VariableBuiltin", { fg = palette.magenta, bold = false })
+  set_hl("Constant", { fg = palette.violet, bold = false })
 
   set_hl("Number", { fg = palette.orange })
   set_hl("Float", { link = "Number" })
-  set_hl("Boolean", { fg = palette.orange, bold = true })
+  set_hl("Boolean", { fg = palette.orange, bold = false })
   set_hl("Enum", { fg = palette.orange })
 
-  set_hl("Character", { fg = palette.violet, bold = true })
+  set_hl("Character", { fg = palette.violet, bold = false })
   set_hl(
     "SpecialChar",
-    { fg = dark_theme and utils.darken(palette.violet, 0.15) or utils.lighten(palette.violet, 0.26), bold = true }
+    { fg = dark_theme and utils.darken(palette.violet, 0.15) or utils.lighten(palette.violet, 0.26), bold = false }
   )
   set_hl("String", { fg = palette.green })
   set_hl("StringDelimiter", { link = "String" })
 
   set_hl("Special", { fg = palette.violet })
-  set_hl("SpecialBold", { fg = palette.violet, bold = true })
+  set_hl("SpecialBold", { fg = palette.violet, bold = false })
 
   set_hl("Field", { fg = palette.violet })
   set_hl("Argument", { fg = dark_theme and utils.lighten(palette.magenta, 0.4) or utils.darken(palette.magenta, 0.36) })
@@ -233,22 +233,22 @@ doom_one.set_colorscheme = function()
   set_hl("Function", { fg = palette.magenta })
   set_hl("FunctionBuiltin", {
     fg = dark_theme and utils.lighten(palette.magenta, 0.4) or utils.darken(palette.magenta, 0.2),
-    bold = true,
+    bold = false,
   })
-  set_hl("KeywordFunction", { fg = dark_theme and palette.blue or palette.red, bold = true })
+  set_hl("KeywordFunction", { fg = dark_theme and palette.blue or palette.red, bold = false })
   set_hl("Method", { fg = dark_theme and palette.violet or palette.cyan })
 
   set_hl("Type", { fg = palette.yellow })
   set_hl("Typedef", { fg = dark_theme and palette.blue or palette.red })
-  set_hl("TypeBuiltin", { fg = palette.yellow, bold = true })
+  set_hl("TypeBuiltin", { fg = palette.yellow, bold = false })
   set_hl("Class", { fg = dark_theme and palette.blue or palette.red })
   set_hl("StorageClass", { fg = dark_theme and palette.blue or palette.red })
   set_hl("Structure", { fg = dark_theme and palette.blue or palette.red })
 
   set_hl("Regexp", { fg = "#dd0093" })
   set_hl("RegexpSpecial", { fg = "#a40073" })
-  set_hl("RegexpDelimiter", { fg = "#540063", bold = true })
-  set_hl("RegexpKey", { fg = "#5f0041", bold = true })
+  set_hl("RegexpDelimiter", { fg = "#540063", bold = false })
+  set_hl("RegexpKey", { fg = "#5f0041", bold = false })
 
   set_hl("CommentURL", { link = "URL" })
   set_hl("CommentLabel", { link = "CommentBold" })
@@ -257,9 +257,9 @@ doom_one.set_colorscheme = function()
 
   --- Diff
   --------
-  set_hl("DiffAddedGutter", { fg = palette.green, bold = true })
-  set_hl("DiffModifiedGutter", { fg = palette.orange, bold = true })
-  set_hl("DiffRemovedGutter", { fg = palette.red, bold = true })
+  set_hl("DiffAddedGutter", { fg = palette.green, bold = false })
+  set_hl("DiffModifiedGutter", { fg = palette.orange, bold = false })
+  set_hl("DiffRemovedGutter", { fg = palette.red, bold = false })
 
   set_hl("DiffAddedGutterLineNr", { fg = palette.grey })
   set_hl("DiffModifiedGutterLineNr", { fg = palette.grey })
@@ -273,8 +273,8 @@ doom_one.set_colorscheme = function()
   ------------
   set_hl("markdownCode", { link = "Comment" })
   set_hl("markdownCodeBlock", { link = "markdownCode" })
-  set_hl("markdownH1", { bold = true })
-  set_hl("markdownH2", { bold = true })
+  set_hl("markdownH1", { bold = false })
+  set_hl("markdownH2", { bold = false })
   set_hl("markdownLinkText", { underline = true })
 
   --- LSP
@@ -291,7 +291,7 @@ doom_one.set_colorscheme = function()
     set_hl("MsgUnderline", { sp = palette.green, underline = true })
   end
 
-  set_hl("LspHighlight", { bg = palette.bg_alt, bold = true })
+  set_hl("LspHighlight", { bg = palette.bg_alt, bold = false })
   set_hl("LspSignatureActiveParameter", { fg = palette.violet })
   set_hl("DiagnosticFloatingError", { link = "ErrorMsg" })
   set_hl("DiagnosticFloatingWarn", { link = "WarningMsg" })
@@ -392,8 +392,8 @@ doom_one.set_colorscheme = function()
   ---------
   set_hl("netrwClassify", { fg = palette.blue })
   set_hl("netrwDir", { link = "Directory" })
-  set_hl("netrwExe", { fg = palette.green, bold = true })
-  set_hl("netrwMakefile", { fg = palette.yellow, bold = true })
+  set_hl("netrwExe", { fg = palette.green, bold = false })
+  set_hl("netrwMakefile", { fg = palette.yellow, bold = false })
   set_hl("netrwTreeBar", { link = "Comment" })
 
   --- Terminal colors
@@ -471,13 +471,13 @@ doom_one.set_colorscheme = function()
     set_hl("BufferCurrentIndex", { bg = "bg", fg = palette.base6 })
     set_hl("BufferCurrentMod", { bg = "bg", fg = palette.yellow })
     set_hl("BufferCurrentSign", { bg = "bg", fg = palette.blue })
-    set_hl("BufferCurrentTarget", { bg = "bg", fg = palette.red, bold = true })
+    set_hl("BufferCurrentTarget", { bg = "bg", fg = palette.red, bold = false })
 
     set_hl("BufferVisible", { fg = palette.base7, bg = "bg" })
     set_hl("BufferVisibleIndex", { fg = palette.base6, bg = "bg" })
     set_hl("BufferVisibleMod", { fg = palette.yellow, bg = "bg" })
     set_hl("BufferVisibleSign", { fg = palette.base4, bg = "bg" })
-    set_hl("BufferVisibleTarget", { fg = palette.red, bg = "bg", bold = true })
+    set_hl("BufferVisibleTarget", { fg = palette.red, bg = "bg", bold = false })
 
     set_hl("BufferInactive", { fg = palette.base6, bg = dark_theme and palette.base1 or palette.base8 })
     set_hl("BufferInactiveIndex", { fg = palette.base6, bg = dark_theme and palette.base1 or palette.base8 })
@@ -485,13 +485,16 @@ doom_one.set_colorscheme = function()
     set_hl("BufferInactiveSign", { fg = palette.base4, bg = dark_theme and palette.base1 or palette.base8 })
     set_hl(
       "BufferInactiveTarget",
-      { fg = palette.red, bg = dark_theme and palette.base1 or palette.base8, bold = true }
+      { fg = palette.red, bg = dark_theme and palette.base1 or palette.base8, bold = false }
     )
 
-    set_hl("BufferTabpages", { fg = palette.blue, bg = palette.bg_alt, bold = true })
-    set_hl("BufferTabpageFill", { fg = palette.base4, bg = dark_theme and palette.base1 or palette.base8, bold = true })
+    set_hl("BufferTabpages", { fg = palette.blue, bg = palette.bg_alt, bold = false })
+    set_hl(
+      "BufferTabpageFill",
+      { fg = palette.base4, bg = dark_theme and palette.base1 or palette.base8, bold = false }
+    )
 
-    set_hl("BufferPart", { fg = palette.fg_alt, bg = palette.bg_alt, bold = true })
+    set_hl("BufferPart", { fg = palette.fg_alt, bg = palette.bg_alt, bold = false })
   end
 
   if config.plugins.telescope then
@@ -502,28 +505,28 @@ doom_one.set_colorscheme = function()
     set_hl("TelescopePromptPrefix", { fg = dark_theme and palette.blue or palette.red })
     set_hl("TelescopeResultsBorder", { link = "TelescopeBorder" })
     set_hl("TelescopePreviewBorder", { link = "TelescopeBorder" })
-    set_hl("TelescopeMatching", { fg = palette.violet, bold = true })
+    set_hl("TelescopeMatching", { fg = palette.violet, bold = false })
     set_hl("TelescopeSelection", { link = "VisualBold" })
     set_hl("TelescopeSelectionCaret", { fg = dark_theme and palette.blue or palette.red })
   end
 
   if config.plugins.neogit then
     set_hl("NeogitDiffAdd", { bg = "#e9f1e8", fg = "#40803f" })
-    set_hl("NeogitDiffAddHighlight", { bg = "#d8e8d7", fg = palette.green, bold = true })
+    set_hl("NeogitDiffAddHighlight", { bg = "#d8e8d7", fg = palette.green, bold = false })
     set_hl("NeogitDiffDelete", { bg = "#f7e9e8", fg = "#cc5655" })
-    set_hl("NeogitDiffDeleteHighlight", { bg = "#f5d9d6", fg = palette.red, bold = true })
+    set_hl("NeogitDiffDeleteHighlight", { bg = "#f5d9d6", fg = palette.red, bold = false })
     set_hl("NeogitDiffContext", { bg = "bg", fg = palette.fg_alt })
-    set_hl("NeogitDiffContextHighlight", { bg = palette.bg_alt, fg = "fg", bold = true })
+    set_hl("NeogitDiffContextHighlight", { bg = palette.bg_alt, fg = "fg", bold = false })
     set_hl(
       "NeogitHunkHeader",
       { bg = dark_theme and utils.darken(palette.violet, 0.2) or utils.lighten(palette.violet, 0.16), fg = "bg" }
     )
-    set_hl("NeogitHunkHeaderHighlight", { bg = palette.violet, fg = palette.bg_alt, bold = true })
-    set_hl("NeogitStagedChanges", { fg = dark_theme and palette.blue or palette.orange, bold = true })
+    set_hl("NeogitHunkHeaderHighlight", { bg = palette.violet, fg = palette.bg_alt, bold = false })
+    set_hl("NeogitStagedChanges", { fg = dark_theme and palette.blue or palette.orange, bold = false })
     set_hl("NeogitStagedChangesRegion", { bg = palette.bg_alt })
-    set_hl("NeogitStashes", { fg = dark_theme and palette.blue or palette.orange, bold = true })
-    set_hl("NeogitUnstagedChanges", { fg = dark_theme and palette.blue or palette.orange, bold = true })
-    set_hl("NeogitUntrackedfiles", { fg = dark_theme and palette.blue or palette.orange, bold = true })
+    set_hl("NeogitStashes", { fg = dark_theme and palette.blue or palette.orange, bold = false })
+    set_hl("NeogitUnstagedChanges", { fg = dark_theme and palette.blue or palette.orange, bold = false })
+    set_hl("NeogitUntrackedfiles", { fg = dark_theme and palette.blue or palette.orange, bold = false })
   end
 
   if config.plugins.dashboard then
@@ -552,11 +555,11 @@ doom_one.set_colorscheme = function()
   end
 
   if config.plugins.nvim_tree then
-    set_hl("NvimTreeFolderName", { fg = dark_theme and palette.blue or palette.base8, bold = true })
+    set_hl("NvimTreeFolderName", { fg = dark_theme and palette.blue or palette.base8, bold = false })
     set_hl("NvimTreeRootFolder", { fg = palette.green })
-    set_hl("NvimTreeEmptyFolderName", { fg = palette.fg_alt, bold = true })
+    set_hl("NvimTreeEmptyFolderName", { fg = palette.fg_alt, bold = false })
     set_hl("NvimTreeSymlink", { fg = "fg", underline = true })
-    set_hl("NvimTreeExecFile", { fg = palette.green, bold = true })
+    set_hl("NvimTreeExecFile", { fg = palette.green, bold = false })
     set_hl("NvimTreeImageFile", { fg = dark_theme and palette.blue or palette.red })
     set_hl("NvimTreeOpenedFile", { fg = palette.fg_alt })
     set_hl("NvimTreeSpecialFile", { fg = "fg", underline = true })
